@@ -100,3 +100,63 @@
   2. @use  - it will also import everything from target file but to access that we need to call it as namespace.variable_name
              at line 82, we have called it as base.$primary-color
              so it makes easier to understand from which file we are referencing that particular variable.
+             
+             
+             
+  
+             
+ 4. Mixins
+ 
+    mixins let you make group of CSS declarations that we can reuse throughout our code.
+    mixins dont return anything.
+    
+    syntax:- 
+      @mixin mixin_name {
+      
+      }
+
+    e.g
+    @mixin transform($property){
+      -webkit-transform: $property;
+      -ms-transform: $property;
+      -moz-transform: $property;
+      -o-transform: $property;
+      transform: $property;
+    }
+  
+    
+    to use the  mixin above,
+      
+     syntax:- @include  mixin_name
+     
+     .box {
+        @include transform(rotate(360deg))
+     }
+
+      
+      .box1 {
+        @include transform(scale(1.2))
+     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
