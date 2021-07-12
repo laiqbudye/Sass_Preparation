@@ -139,24 +139,54 @@
      }
     
     
+    Functions: functions return something. to use functions we dont need to use @include directive.
+    
+    
+    
+5. Inheritance
+
+    lets take an example of alert msg box.
+    we need to show success, error & warning alert boxes, where the basic styling will remain same & only border color will get updated.
+
+    green for success, red for error & yellow for warnings. in this case inheritance will becomes useful.
+
+    whatever we want to extend should start with '%' sign.
+    @extend directive is used to extend particular css 
+
+
+    %message-shared {
+      border: 1px solid #ccc;
+      padding: 10px;
+      color: #333;
+    }
+    
+    .success {
+      @extend %message-shared;
+      border-color: green;
+    }
+
+    .error {
+      @extend %message-shared;
+      border-color: red;
+    }
+
+    .warning {
+      @extend %message-shared;
+      border-color: yellow;
+    }
+
     
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  6. Operators
+      We can perform mathmatical operations as well using Scss.
+      
+      e.g
+
+      article[role="main"] {
+        float: left;
+        width: 600px / 960px * 100%;
+      }
+
