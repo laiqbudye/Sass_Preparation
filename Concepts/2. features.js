@@ -82,3 +82,7 @@
       background-color: base.$primary-color;
       color: white;
     }
+
+
+  in the example above _base.scss, here '_' will tell compiler to ignore that file.
+  when we call that file with @use then only it will get compiled.
